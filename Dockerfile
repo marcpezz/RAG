@@ -32,8 +32,8 @@ RUN conda create -n rag -y python=3.11 && \
     conda clean -afy && \
     /opt/conda/envs/rag/bin/pip install --no-cache-dir \
         llama-index-core==0.11.23 \
-        llama-index-llms-ollama==0.4.4 \
-        llama-index-embeddings-ollama==0.4.0 \
+        llama-index-llms-ollama==0.3.6 \
+        llama-index-embeddings-ollama==0.3.1 \
         llama-index-vector-stores-chroma==0.3.1 \
         llama-index-readers-file==0.3.1 \
         chromadb==0.5.23 \
