@@ -15,7 +15,7 @@ USER root
 RUN curl -fsSL https://ollama.com/install.sh | sh
 
 # ── Pull models at build time ─────────────────────────────────────────────────
-ENV OLLAMA_MODELS=/app/.ollama/models
+ENV OLLAMA_MODELS=/home/jovyan/.ollama/models
 
 RUN ollama serve > /var/log/ollama.log 2>&1 & \
     for i in $(seq 1 30); do \
