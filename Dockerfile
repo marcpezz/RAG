@@ -31,13 +31,13 @@ RUN ollama serve > /var/log/ollama.log 2>&1 & \
 RUN conda create -n rag -y python=3.11 && \
     conda clean -afy && \
     /opt/conda/envs/rag/bin/pip install --no-cache-dir \
-        llama-index-core==0.11.23 \
-        llama-index-llms-ollama==0.3.6 \
-        llama-index-embeddings-ollama==0.3.1 \
-        llama-index-vector-stores-chroma==0.3.1 \
-        llama-index-readers-file==0.3.1 \
-        chromadb==0.5.23 \
-        pymupdf==1.24.14 \
+        llama-index-core \
+        llama-index-llms-ollama \
+        llama-index-embeddings-ollama \
+        llama-index-vector-stores-chroma \
+        llama-index-readers-file \
+        chromadb \
+        pymupdf \
         numpy tqdm && \
     /opt/conda/envs/rag/bin/python -m ipykernel install --name rag --display-name "RAG (papers)"
 
