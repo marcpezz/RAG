@@ -37,7 +37,7 @@ RUN conda create -n rag -y python=3.11 && \
         llama-index-vector-stores-chroma \
         llama-index-readers-file \
         chromadb \
-        pymupdf \
+        pymupdf ipykernel \
         numpy tqdm && \
     /opt/conda/envs/rag/bin/python -m ipykernel install --name rag --display-name "RAG (papers)"
 
